@@ -282,16 +282,15 @@ a:hover {
     gap: 1.5rem;
 }
 
-/* Workflow Animation */
 .workflow-animation {
     position: relative;
-    width: 480px;
-    height: 420px;
+    width: 600px;
+    height: 400px;
     z-index: 10;
     flex-shrink: 0;
     perspective: 800px;
     margin-right: 5rem;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transform-origin: center center;
 }
 
@@ -312,10 +311,12 @@ a:hover {
 }
 
 .line-1 { animation-delay: 0s; }
-.line-2 { animation-delay: 0.3s; }
-.line-3 { animation-delay: 0.6s; }
-.line-4 { animation-delay: 0.9s; }
-.line-5 { animation-delay: 1.2s; }
+.line-2 { animation-delay: 0.2s; }
+.line-3 { animation-delay: 0.4s; }
+.line-4 { animation-delay: 0.6s; }
+.line-5 { animation-delay: 0.8s; }
+.line-6 { animation-delay: 1.0s; }
+.line-7 { animation-delay: 1.2s; }
 
 @keyframes dashFlow {
     to { stroke-dashoffset: -24; }
@@ -328,10 +329,12 @@ a:hover {
 }
 
 .dot-1 { animation-delay: 0s; }
-.dot-2 { animation-delay: 0.5s; }
+.dot-2 { animation-delay: 0.4s; }
 .dot-3 { animation-delay: 0.2s; }
-.dot-4 { animation-delay: 0.7s; }
-.dot-5 { animation-delay: 1s; }
+.dot-4 { animation-delay: 0.6s; }
+.dot-5 { animation-delay: 0.8s; }
+.dot-6 { animation-delay: 0.5s; }
+.dot-7 { animation-delay: 1.0s; }
 
 /* Workflow Nodes */
 .wf-node {
@@ -367,12 +370,13 @@ a:hover {
 }
 
 /* Node positioning (matching SVG coordinates) */
-.node-input  { left: 25px;  top: 55px;  }
-.node-query  { left: 25px;  top: 275px; }
-.node-agent  { left: 185px; top: 155px; }
-.node-rag    { left: 345px; top: 35px;  }
-.node-sql    { left: 345px; top: 155px; }
-.node-llm    { left: 335px; top: 295px; width: 130px; }
+.node-response { left: 35px; top: 80px; }
+.node-query    { left: 75px; top: 280px; }
+.node-agent    { left: 210px; top: 175px; }
+.node-inventory { left: 360px; top: 160px; }
+.node-order    { left: 390px; top: 30px; }
+.node-invoice  { left: 490px; top: 110px; }
+.node-email    { left: 450px; top: 305px; }
 
 /* Center node (AI Agent) — larger & special glow */
 .node-agent {

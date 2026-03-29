@@ -38,59 +38,60 @@
         <!-- Animated AI Workflow Diagram -->
         <div class="workflow-animation">
             <!-- SVG Connector Lines -->
-            <svg class="workflow-lines" viewBox="0 0 480 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Data Input → AI Agent -->
-                <line x1="80" y1="100" x2="200" y2="200" class="connector-line line-1" />
-                <!-- User Query → AI Agent -->
-                <line x1="80" y1="320" x2="200" y2="200" class="connector-line line-2" />
-                <!-- AI Agent → RAG Pipeline -->
-                <line x1="280" y1="200" x2="400" y2="80" class="connector-line line-3" />
-                <!-- AI Agent → SQL Query -->
-                <line x1="280" y1="200" x2="400" y2="200" class="connector-line line-4" />
-                <!-- AI Agent → LLM Processing -->
-                <line x1="280" y1="200" x2="400" y2="340" class="connector-line line-5" />
+            <svg class="workflow-lines" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Request → Agent -->
+                <path d="M 130,325 L 240,325 L 240,225" class="connector-line line-1" />
+                <!-- Agent → Response -->
+                <path d="M 270,225 L 90,225 L 90,125" class="connector-line line-2" />
+                <!-- Agent → Inventory -->
+                <path d="M 270,225 L 415,205" class="connector-line line-3" />
+                <!-- Inventory → Order -->
+                <path d="M 415,205 L 415,75 L 445,75" class="connector-line line-4" />
+                <!-- Inventory → Invoice -->
+                <path d="M 415,205 L 500,205 L 500,155 L 545,155" class="connector-line line-5" />
+                <!-- Order → Invoice -->
+                <path d="M 445,75 L 545,75 L 545,155" class="connector-line line-6" />
+                <!-- Invoice → Email -->
+                <path d="M 545,155 L 545,350 L 505,350" class="connector-line line-7" />
+
                 <!-- Glowing dots traveling along lines -->
-                <circle r="4" class="travel-dot dot-1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M80,100 L200,200" />
-                </circle>
-                <circle r="4" class="travel-dot dot-2">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M80,320 L200,200" />
-                </circle>
-                <circle r="4" class="travel-dot dot-3">
-                    <animateMotion dur="2s" repeatCount="indefinite" path="M280,200 L400,80" />
-                </circle>
-                <circle r="4" class="travel-dot dot-4">
-                    <animateMotion dur="2s" repeatCount="indefinite" path="M280,200 L400,200" />
-                </circle>
-                <circle r="4" class="travel-dot dot-5">
-                    <animateMotion dur="2s" repeatCount="indefinite" path="M280,200 L400,340" />
-                </circle>
+                <circle r="4" class="travel-dot dot-1"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 130,325 L 240,325 L 240,225" /></circle>
+                <circle r="4" class="travel-dot dot-2"><animateMotion dur="3s" repeatCount="indefinite" path="M 270,225 L 90,225 L 90,125" /></circle>
+                <circle r="4" class="travel-dot dot-3"><animateMotion dur="2s" repeatCount="indefinite" path="M 270,225 L 415,205" /></circle>
+                <circle r="4" class="travel-dot dot-4"><animateMotion dur="2s" repeatCount="indefinite" path="M 415,205 L 415,75 L 445,75" /></circle>
+                <circle r="4" class="travel-dot dot-5"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 415,205 L 500,205 L 500,155 L 545,155" /></circle>
+                <circle r="4" class="travel-dot dot-6"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 445,75 L 545,75 L 545,155" /></circle>
+                <circle r="4" class="travel-dot dot-7"><animateMotion dur="3s" repeatCount="indefinite" path="M 545,155 L 545,350 L 505,350" /></circle>
             </svg>
 
             <!-- Nodes -->
-            <div class="wf-node node-input node-1">
-                <i class="fas fa-database"></i>
-                <span>Data Input</span>
+            <div class="wf-node node-response node-1">
+                <i class="fas fa-comment"></i>
+                <span>Customer Response</span>
             </div>
             <div class="wf-node node-query node-2">
-                <i class="fas fa-comment-dots"></i>
-                <span>User Query</span>
+                <i class="fas fa-smile"></i>
+                <span>Customer Request</span>
             </div>
             <div class="wf-node node-agent node-3">
                 <i class="fas fa-brain"></i>
                 <span>AI Agent</span>
             </div>
-            <div class="wf-node node-rag node-4">
-                <i class="fas fa-project-diagram"></i>
-                <span>RAG Pipeline</span>
+            <div class="wf-node node-inventory node-4">
+                <i class="fas fa-search"></i>
+                <span>Inventory Check</span>
             </div>
-            <div class="wf-node node-sql node-5">
-                <i class="fas fa-code"></i>
-                <span>SQL Query</span>
+            <div class="wf-node node-order node-5">
+                <i class="fas fa-box-open"></i>
+                <span>Order Management</span>
             </div>
-            <div class="wf-node node-llm node-6">
-                <i class="fas fa-microchip"></i>
-                <span>LLM Processing</span>
+            <div class="wf-node node-invoice node-6">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Invoice Generator</span>
+            </div>
+            <div class="wf-node node-email node-7">
+                <i class="fas fa-envelope"></i>
+                <span>Email Notification</span>
             </div>
         </div>
 
@@ -126,7 +127,7 @@
                         <div class="icon"><i class="fas fa-brain"></i></div>
                         <h3>AI & Machine Learning</h3>
                         <ul class="skill-list">
-                            <li>LLMs (GPT-4, Claude, Llama)</li>
+                            <li>LLMs (GPT-4, Claude, Qwen, Llama)</li>
                             <li>RAG Architecture</li>
                             <li>Prompt Engineering</li>
                             <li>ReAct Agents</li>
@@ -139,6 +140,7 @@
                         <h3>Frameworks & Vector DBs</h3>
                         <ul class="skill-list">
                             <li>LangChain & LangGraph</li>
+                            <li>Power BI & MS Excel</li>
                             <li>FastAPI & Flask</li>
                             <li>Streamlit</li>
                             <li>FAISS</li>
@@ -152,7 +154,8 @@
                         <ul class="skill-list">
                             <li>Python 3.11+</li>
                             <li>SQL & NoSQL</li>
-                            <li>SQLite & PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>Java & JSF</li>
                             <li>Pandas & NumPy</li>
                             <li>Pydantic & SQLAlchemy</li>
                         </ul>
